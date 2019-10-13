@@ -4,7 +4,6 @@ from .views import (InstructorList, SectionList, CourseList, SemesterList,
                     RegistrationDetail, SemesterDetail, CourseDetail, StudentDetail)
 
 urlpatterns = [
-
     path('instructor/',
          InstructorList.as_view(),
          name='courseinfo_instructor_list_urlpattern'),
@@ -23,7 +22,7 @@ urlpatterns = [
 
     path('course/',
          CourseList.as_view(),
-         name='courseinfo_course_list_view'),
+         name='courseinfo_course_list_urlpattern'),
 
     path('course/<int:pk>/',
          CourseDetail.as_view(),
@@ -52,4 +51,5 @@ urlpatterns = [
     path('registration/<int:pk>/',
          RegistrationDetail.as_view(),
          name='courseinfo_registration_detail_urlpattern'),
+
 ]
